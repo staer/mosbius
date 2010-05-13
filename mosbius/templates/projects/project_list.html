@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} :: projects {% endblock title %}
+
+{% block content %}
+<h2>Projects</h2>
+<ul>
+    {% for project in project_list %}
+    <li>
+        <strong><a href="{{ project.get_absolute_url }}">{{ project }}</a></strong>
+         - {{ project.teaser }}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% load markup %}
+{% load comments %}
+{% load tagging_tags %}
+
+{% include "blog/_post_header.html" %}
+<br/>
+{{ post.body|markdown:"codehilite"|truncatewords_html:"200" }}
+{% include "blog/_post_footer.html" %}
+<br/><br/><br/>

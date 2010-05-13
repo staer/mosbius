@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} :: blog :: {{ year }}{% endblock title %}
+
+{% block content %}
+<h2>{{ year }} Archive</h2>
+<ul>
+{% for d in date_list %}
+    <li><a href="{% url blog_post_archive_month year=d.year month=d.month %}">{{ d|date:"F" }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}

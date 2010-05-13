@@ -1,0 +1,163 @@
+#center {
+    border:1px solid #202020;
+    border-bottom:0;
+    border-top:0;
+    color:#000;
+    padding:1.5em;
+}
+
+#container {
+    background-color:#fafafa;
+    margin:1em 10%;
+    min-width:60em;
+    position:absolute;
+    width:80%;
+}
+
+#top {
+    background-color:#202020;
+    height:2.4em;
+    max-height:2.4em;
+}
+
+#header {
+    background-color:#3882C7;
+    border:1px solid #fafafa;
+    color:#fafafa;
+    font-size:2em;
+    height:2.5em;
+    padding-left:2em;
+    padding-top:1em;
+}
+
+#summary {
+    border: 1px solid gray;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#footer {
+    border:1px solid #202020;
+    border-top:0;
+    padding:0.5em;
+    text-align:right;
+}
+
+#logos {
+    padding-top: 10px;
+    text-align: center;
+    background-color: #CDCDCD;
+}
+
+.centered {
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+.menutop {
+    font-size:1em;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+.menutop a {
+    color:#fafafa;
+    margin:0 0.4em;
+    text-decoration:none;
+}
+
+.menutop a:hover {
+    color:#FF0;
+    text-decoration:none;
+}
+
+.menutop li {
+    border-right:1px solid #fff;
+    display:inline;
+    float:left;
+    margin:0;
+    padding:0.6em 10px;
+}
+
+a {
+    color:#000;
+    text-decoration:underline;
+}
+
+body {
+    background-color:#CDCDCD;
+    font: normal normal normal 1em/1.5em 'Minion Pro', Georgia, serif;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Trebuchet MS', Tahoma, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:1.6em;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:1.2em;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:1.1em;
+}
+
+h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:1em;
+}
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:0.9em;
+}
+
+p {
+    margin:1px 0.5em 0.5em 1.5em;
+}
+
+pre {
+    margin: 1px 0.5em 0.5em 1.5em;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.codehilite {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    background-color: #CDCDCD;
+    font-size: 13px;
+    font-family: Verdana;
+}
+
+.codehilitetable {
+    width: 100%;
+}
+
+.codehilitetable .code {
+    width: 100%;
+}
+
+

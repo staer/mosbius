@@ -1,0 +1,24 @@
+{% load markup %}
+{% load tagging_tags %}
+{% load comments %}
+
+<div style="color: gray; margin-top: 15px;">
+    <div style="float:left;">
+        Posted by {{ post.posted_by.first_name }} {{ post.posted_by.last_name }} at {{ post.posted_on|date:"f a" }}
+        
+        {% tags_for_object post as tags %}
+        {% if tags %}
+            <br/>Tagged in: 
+            {% for tag in tags %}
+                <a href="{% url blog_tag_list tag=tag.name %}">{{ tag.name }}</a>
+                {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div style="float:right; text-align:center;">
+        <a href="{{ post.get_absolute_url }}">Read More</a>
+        <br/>
+        {% get_comment_count for post as comment_count %}
+        <a href="{{ post.get_absolute_url }}#comments">{{ comment_count }} Comments</a>
+    </div>
+</div>

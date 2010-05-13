@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} :: blog :: {{ month|date:"F Y"|lower }}{% endblock title %}
+
+{% block content %}
+
+<h2>Posts for {{ month|date:"F Y" }}</h2>
+<br/>
+{% for post in post_list %}
+    {% include "blog/_post_teaser.html" %}
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load markup %}
+{% load comments %}
+{% load tagging_tags %}
+
+{% block title %}{{ block.super }} :: blog{% endblock title %}
+
+{% block content %}
+
+{% for post in posts %}
+    {% include "blog/_post_teaser.html" %}
+{% endfor %}
+
+{% endblock content %}

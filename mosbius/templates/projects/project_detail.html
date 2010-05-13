@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}{{ block.super }} :: {{ project|lower }}{% endblock title %}
+
+{% block content %}
+<h2>{{ project.title }}</h2>
+<br/>
+{% if project.has_summary %}
+    <div id="summary">
+    {% if project.start_date %}
+    Project Start: {{ project.start_date|date:"F jS, Y" }}<br/>
+    {% endif %}
+    
+    {% if project.end_date %}
+    Project End: {{ project.end_date|date:"F jS, Y" }}<br/>
+    {% endif %}
+    
+    {% if project.source_code %}
+    Source: <a href="{{ project.source_code }}">{{ project.source_code }}</a><br/>
+    {% endif %}    
+    </div>
+{% endif %}
+<br/>
+{{ project.body|markdown:"codehilite" }}
+{% endblock content %}

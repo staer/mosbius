@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load comments %}
+{% load markup %}
+
+{% block content %}
+{{ comment|markdown }}
+<hr/>
+<form method="POST" action="{% comment_form_target %}">
+{% include "comments/_comment_form.html" %}
+</form>
+
+{% endblock content %}

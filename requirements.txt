@@ -1,0 +1,11 @@
+### PIP Requirements for mosbius website ###
+django==1.1.1
+django-tagging==0.3.1
+south==0.6.2
+hg+http://bitbucket.org/ubernostrum/django-contact-form/#egg=django-contact-form
+mysql-python
+PIL
+markdown
+pygments
+docutils
+fabric

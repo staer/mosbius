@@ -1,0 +1,33 @@
+<table>
+    {% for field in form %}
+    
+        {% if field.is_hidden %}
+        <tr><td>{{ field }}</td></tr>
+        {% else %}
+            {% if field.errors %}
+            <tr>
+                <td></td>
+                <td>
+                    {% for error in field.errors %}
+                    <span class="error">*{{ error }}</span><br/>
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endif %}
+            <tr{% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>
+                <td align="right">{{ field.label_tag }}:</td><td>{{ field }}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+    <tr>
+        <td colspan="2" align="center">
+            <span style="color:gray;">You can use <a href="http://daringfireball.net/projects/markdown/">markdown</a> syntax to format your comments.</span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" name="preview" value="Preview" />
+            <input type="submit" value="Submit" />
+        </td>
+    </tr>
+</table>

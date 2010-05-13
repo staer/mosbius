@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="centered">
+    <h2>Your Comment Has Been Posted</h2>
+    <br/>
+    Click <a href="{{ comment.get_absolute_url }}">here</a> to view your comment
+</div>
+{% endblock content %}

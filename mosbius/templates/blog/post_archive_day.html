@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} :: blog :: {{ day|date:"F dS, Y"|lower }}{% endblock title %}
+
+{% block content %}
+<h2>Posts for {{ day|date:"F dS, Y" }}</h2>
+<br/>
+{% for post in post_list %}
+    {% include "blog/_post_teaser.html" %}
+{% endfor %}
+{% endblock content %}

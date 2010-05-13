@@ -1,0 +1,15 @@
+The following information was sent from the contact form on the mosbius.com 
+website:
+
+-------------------
+
+Name: {{ name }}
+Email: {{ email }}
+Message: {{ body }}
+
+-------------------
+
+Please respond at your earlier convenience,
+
+webmaster@mosbius.com
+http://www.mosbius.com/

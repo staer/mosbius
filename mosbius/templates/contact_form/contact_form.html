@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} :: contact{% endblock title %}
+
+{% block content %}
+<h2>Get in Touch with Me</h2>
+<form method="post" action=".">
+    <table>
+        {% for field in form %}
+        {% if field.errors %}
+        <tr>
+            <td></td>
+            <td>
+                {% for error in field.errors %}
+                <span class="error">* {{ error }}</span><br/>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td align="right">{{ field.label_tag }}:</td>
+            <td>{{ field }}</td>
+        </tr>
+        {% endfor %}
+    <tr>
+        <td colspan="2" class="centered">
+            <input type="submit" value="Submit" />
+        </td>
+    </tr>
+    </table>
+</form>
+{% endblock content %}
